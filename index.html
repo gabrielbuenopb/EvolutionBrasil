@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Evolution Brasil</title>
+        <link rel="stylesheet" href="css_evolution/style_evolution.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="images_evolution/icon-evolution.png">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <main>
+            <header id="scroll_option">
+                <div class="header_wrap">
+                    <div class="title_wrap">
+                        <a href=# class="company_name" target="_self">
+                            <div class="evolution">evolution</div><div class="brasil">BRASIL</div>
+                        </a>
+                    </div>
+                    <!-- *****************  MENU BAR  ***************** -->
+                    <div class="menu_bar">
+                        <label class="menu_icon" for="btn_show">&#9776;</label>
+                        <input class="menu_btn" type="checkbox" id="btn_show" />
+                        <div class="menu_wrap">
+                            <ul class="menu_list">
+                                <!-- <div class="space">
+                                </div> -->
+                                <li onclick="Click1()" class="select_item select_style1" id="background1"><button class="displayed_option">A empresa</button>
+                                    <ul class="dropdown_list">
+                                        <div class="dropdown_wrap show" id="dropdown_click_1">
+                                            <li><a href=# target="_self">Quem somos</a></li>
+                                            <li><a href=# target="_self">Estrutura</a></li>
+                                            <li><a href=# target="_self">Parceiros</a></li>
+                                            <li><a href=# target="_self">Missão, Visão e Valores</a></li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li onclick="Click2()" class="select_item select_style1" id="background2"><button class="displayed_option">Produtos</button>
+                                    <ul class="dropdown_list">
+                                        <div class="dropdown_wrap show" id="dropdown_click_2">
+                                            <li><a href=# target="_self">Produto 1</a></li>
+                                            <li><a href=# target="_self">Produto 2</a></li>
+                                            <li><a href=# target="_self">Produto 3</a></li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li onclick="Click3()" class="select_item select_style1" id="background3"><button class="displayed_option">Nosso time</button>
+                                    <ul class="dropdown_list">
+                                        <div class="dropdown_wrap show" id="dropdown_click_3">
+                                            <li><a href=# target="_self">Organograma</a></li>
+                                            <li><a href=# target="_self">Trabalhe com a gente</a></li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="select_item select_style1"><button class="displayed_option">Artigos</button>
+                                </li>
+                                <li class="select_item select_style1"><button class="displayed_option">Contato</button>
+                                </li>
+                                <!-- <div class="space">
+                                </div> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            
+            <!-- *****************  CONTENT ***************** -->
+            <section class="home">
+                <div class="content_wrap">    
+                    <div class="slogan">
+                        <h1 class="slide-right">Evolução para a vida</h1>
+                    </div>
+                </div>
+            </section>
+                
+            <!-- *****************  FOOTER  ***************** -->
+            <footer>
+                <p>Endereço: R Ceará, 1709 - sl 1101</br>Funcionários - Belo Horizonte, MG</p>
+            </footer>
+            <!-- *****************  SCRIPT  ***************** -->
+            <script>
+                window.onscroll = function() {myFunction()};
+                
+                var header = document.getElementById("scroll_option");
+                var sticky = header.offsetTop;
+                
+                function myFunction() {
+                  if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                    // header.classList.add("slide-bottom");
+                  } else {
+                    header.classList.remove("sticky");
+                    // header.classList.remove("slide-bottom");
+                  }
+                }
+
+                function Click1() {
+                    var openDropdown1=document.getElementById("dropdown_click_1").classList.toggle("show");
+                    var background1=document.getElementsById("background1");
+                    if (background1.classList.contains("select_style1")) {
+                        background1.classList.remove("select_style1");
+                        background1.classList.add("select_style2");
+                    }
+                    else {
+                        background1.classList.add("select_style1");
+                        background1.classList.remove("select_style2");
+                    }
+                }
+                function Click2() {
+                    var openDropdown2=document.getElementById("dropdown_click_2").classList.toggle("show");
+                    var background2=document.getElementsById("background2");
+                    if (background2.classList.contains("select_style1")) {
+                        background2.classList.remove("select_style1");
+                        background2.classList.add("select_style2");
+                    }
+                    else {
+                        background2.classList.add("select_style1");
+                        background2.classList.remove("select_style2");
+                    }
+                }
+                function Click3() {
+                    var openDropdown3=document.getElementById("dropdown_click_3").classList.toggle("show");
+                    var background3=document.getElementsById("background3");
+                    if (background3.classList.contains("select_style1")) {
+                        background3.classList.remove("select_style1");
+                        background3.classList.add("select_style2");
+                    }
+                    else {
+                        background3.classList.add("select_style1");
+                        background3.classList.remove("select_style2");
+                    }
+                }
+                // window.onclick = function(event) {
+                //     if (!event.target.matches('.displayed_option')) {
+                //         var dropdowns1 = document.getElementsById("dropdown_click_1");
+                //         var dropdowns2 = document.getElementsById("dropdown_click_2");
+                //         var dropdowns3 = document.getElementsById("dropdown_click_3");
+                //         var i;
+                //         for (i = 0; i < dropdowns1.length; i++) {
+                //             var openDropdown1 = dropdowns[i];
+                //             if (openDropdown1.classList.contains("show")) {
+                //                 openDropdown1.classList.remove("show");
+                //             }
+                //         }
+                //         for (i = 0; i < dropdowns2.length; i++) {
+                //             var openDropdown2 = dropdowns[i];
+                //             if (openDropdown2.classList.contains("show")) {
+                //                 openDropdown2.classList.remove("show");
+                //             }
+                //         }
+                //         for (i = 0; i < dropdowns3.length; i++) {
+                //             var openDropdown3 = dropdowns[i];
+                //             if (openDropdown3.classList.contains("show")) {
+                //                 openDropdown3.classList.remove("show");
+                //             }
+                //         }
+                //     }
+                    
+                // }
+
+            </script>
+        </main>
+    </body>
+</html>    
